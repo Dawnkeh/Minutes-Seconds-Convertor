@@ -19,11 +19,11 @@ def fweeks(x, q):
     return x * q
 
 
-def calc(x, op, y):
+def calc(x, op):
     while True:
         print("                             ")
-        print("1.Minutes -> Seconds")
-        print("2.Minutes <- Seconds")
+        print("1.Seconds -> Minutes")
+        print("1.Seconds <- Minutes")
         print("3.Minutes -> Hours")
         print("4.Minutes <- Hours")
         print("5.Hours -> Days")
@@ -37,9 +37,9 @@ def calc(x, op, y):
             try:
                 x = float(x)
 
-                if op == "1":
+                if op == "2":
                     print(x, "converted to seconds is", tsec(x, y))
-                elif op == "2":
+                elif op == "1":
                     print(x, "converted to minutes is", tmins(x, y))
                 elif op == "3":
                     print(x, "converted to hours is", tmins(x, y))
@@ -55,4 +55,4 @@ def calc(x, op, y):
                     print(x, "converted to days is", fweeks(x, q))
             except ValueError:
                 print("Invalid Input")
-calc(x, op, y)
+calc(x, op)
